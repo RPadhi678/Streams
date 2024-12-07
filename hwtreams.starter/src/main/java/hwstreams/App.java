@@ -1,3 +1,6 @@
+// Rahul Padhi 
+// ECS 160
+
 package hwstreams;
 
 import java.io.IOException;
@@ -7,10 +10,10 @@ public class App {
     public static void main(String[] args) throws IOException {
         // You may change this method, we will only evaluate methods in GitHubProc
         // you will need to change the path on this next line.
-        var csvPath = Paths.get("/Users/devanbu/Downloads/hw32/hw3starter/data/github_issues.csv");
+        var csvPath = Paths.get("/Users/rahulpadhi/Downloads/Streams/Streams/hwtreams.starter/data/github_issues.csv");
         // Uncomment the following line to see what the stream looks like, and get
         // started.
-        // Util.readComments(csvPath).limit(5).forEach(System.out::println);
+        Util.readComments(csvPath).limit(5).forEach(System.out::println);
         // The rest of this is unimplemented, so won't work.
         System.out.println(GitHubProc.getWordCount(Util.readComments(csvPath), "typo"));
         System.out.println(GitHubProc.getPerProjectCount(Util.readComments(csvPath)));
@@ -23,3 +26,4 @@ public class App {
         System.out.println(GitHubProc.filterCommentsWithUrl(Util.readComments(csvPath)).count());
     }
 }
+
